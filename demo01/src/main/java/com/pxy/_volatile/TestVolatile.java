@@ -3,13 +3,17 @@ package com.pxy._volatile;
 /**
  * @author puxy
  * @version 1.0
- * @description
+ * @description 测试缓存行对齐
  * @date 2021/1/8 16:09
  */
 public class TestVolatile {
 
+    /**
+     * Long 为 8 字节，在计算机中 1 字节(byte)=8比特(bit)，所以1个Long占64bit
+     * 现在主流CPU缓存行大小为64字节，8个Long类型正好占满一个缓存行
+     */
     public static class F{
-        public volatile long p0,p1,p2,p3,p4,p5,p6,p7;
+        public long p0,p1,p2,p3,p4,p5,p6,p7;
     }
     public static class T extends F{
         public volatile long x =0;

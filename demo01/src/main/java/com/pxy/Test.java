@@ -12,11 +12,20 @@ import java.util.Arrays;
 public class Test {
 
     public static void main(String[] args) {
-//        int x = 6;
-//        int arr[] = {1,2,3,4,5,6,7,1,8,9,9};
-//        work(x,arr);
+        /**
+         * currentTimeMillis 以毫秒为单位 起始时间为 1970.01.01 00:00:00 UTC时间(世界统一时间基于原子时钟,比GMT格林尼治时间更准,因为GMT基于地球自转)
+         * nanoTime 以纳秒为单位 没有固定起始时间 是基于cpu的时钟周期来计时的
+         */
+        System.out.println(System.currentTimeMillis());
+        System.out.println(System.currentTimeMillis());
+        System.out.println(System.nanoTime());
+        System.out.println(System.nanoTime());
 
-        String str = "abcab1cddd";
+    }
+
+    private static void work1() {
+        //好像是计算字符串中 不重复的 子串 的长度
+        String str = "abcdcabccabcc";
         int max = 0;
         for (int i = 0; i < str.length() - 1; i++) {
             ArrayList<Character> chars = new ArrayList<>();
@@ -40,7 +49,6 @@ public class Test {
             max = max < x ? x : max;
         }
         System.out.println(max);
-
     }
 
     private static void work(int x, int arr[]) {
