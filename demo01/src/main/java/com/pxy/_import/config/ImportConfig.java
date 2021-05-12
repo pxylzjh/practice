@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Import;
 /**
  * @author puxy
  * @version 1.0
- * @description
+ * @description @Import方式注入对象到Spring容器
  * @date 2021/1/25 14:35
  */
 @Import({ObjectA.class, MyImportSelector.class, MyRegistrar.class})
