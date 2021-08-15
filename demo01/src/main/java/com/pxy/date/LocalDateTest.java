@@ -3,6 +3,7 @@ package com.pxy.date;
 import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
+import java.time.temporal.TemporalAdjuster;
 import java.time.temporal.WeekFields;
 import java.util.Calendar;
 import java.util.Date;
@@ -23,9 +24,13 @@ public class LocalDateTest {
     public static void main(String[] args) {
 
 
-        formatDate();
+//        formatDate();
+            LocalDate localDate = LocalDate.of(2017, 07, 8);
+            TemporalAdjuster temporalAdjuster = t -> t.plus(Period.ofDays(14));
+            LocalDate result = localDate.with(temporalAdjuster);
 
-
+            String fourteenDaysAfterDate = "2017-07-22";
+        System.out.println(result.toString());
     }
 
     private static void formatDate() {
