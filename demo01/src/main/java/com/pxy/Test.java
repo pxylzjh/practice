@@ -12,6 +12,7 @@ import java.util.Arrays;
 public class Test {
 
     public static void main(String[] args) {
+
         /**
          * currentTimeMillis 以毫秒为单位 起始时间为 1970.01.01 00:00:00 UTC时间(世界统一时间基于原子时钟,比GMT格林尼治时间更准,因为GMT基于地球自转)
          * nanoTime 以纳秒为单位 没有固定起始时间 是基于cpu的时钟周期来计时的
