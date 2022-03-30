@@ -22,7 +22,8 @@ public class BitOperate {
 
         System.out.println("a="+a+" b="+b);
 
-
+        Short s = null;
+        System.out.println(s == 1);
     }
 
 }
