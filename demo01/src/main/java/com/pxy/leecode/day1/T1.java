@@ -7,10 +7,14 @@ import java.util.Map;
 /**
  * @author puxy
  * @version 1.0
- * @description 刷题
+ * @description https://leetcode-cn.com/problems/two-sum/
  * @date 2022/4/6 16:45
  */
 public class T1 {
+
+    /**
+     * 给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target  的那 两个 整数，并返回它们的数组下标。
+     */
 
     public static void main(String[] args) {
         int[] nums = {3,2,4};
