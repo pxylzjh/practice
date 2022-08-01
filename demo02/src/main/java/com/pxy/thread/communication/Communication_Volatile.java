@@ -1,4 +1,4 @@
-package com.pxy.thread;
+package com.pxy.thread.communication;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,10 +6,10 @@ import java.util.List;
 /**
  * @author puxy
  * @version 1.0
- * @description 线程间通信
+ * @description 线程间通信 - volatile
  * @date 2022/8/1 18:12
  */
-public class T {
+public class Communication_Volatile {
 
 
     private volatile static boolean notice = false;
@@ -32,17 +32,18 @@ public class T {
 
         Thread threadB = new Thread(() -> {
             System.out.println("线程B启动,等待线程A通知");
-            while (notice) {
-                System.out.println("线程B收到线程A通知,开始执行");
+            while (true) {
+                if (notice) {
+                    System.out.println("线程B收到线程A通知,开始执行");
+                }
             }
 
         });
 
-        threadA.start();
-        // 让主线程 等待 1s 确保线程A先执行
-        Thread.sleep(1000);
         threadB.start();
-
+        // 让主线程 等待 1s 确保线程B先执行
+        Thread.sleep(1000);
+        threadA.start();
 
     }
 
