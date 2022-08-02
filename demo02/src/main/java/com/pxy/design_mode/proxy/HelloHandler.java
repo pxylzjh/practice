@@ -1,4 +1,4 @@
-package com.pxy.proxy.service;
+package com.pxy.design_mode.proxy;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
@@ -7,7 +7,7 @@ import java.lang.reflect.Proxy;
 /**
  * @author puxy
  * @version 1.0
- * @description TODO
+ * @description HelloHandler
  * @date 2021/4/2 14:35
  */
 public class HelloHandler implements InvocationHandler {

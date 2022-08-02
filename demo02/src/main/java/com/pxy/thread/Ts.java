@@ -2,12 +2,6 @@ package com.pxy.thread;
 
 import com.pxy.lambda.FunctionInterface;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.function.Function;
-import java.util.stream.IntStream;
-
 /**
  * @author puxy
  * @version 1.0

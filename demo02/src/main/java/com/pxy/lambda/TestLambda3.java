@@ -1,10 +1,5 @@
 package com.pxy.lambda;
 
-import com.pxy.lambda.pojo.School;
-import com.pxy.lambda.pojo.User;
-
-import java.util.function.Consumer;
-
 /**
  * @author puxy
  * @version 1.0

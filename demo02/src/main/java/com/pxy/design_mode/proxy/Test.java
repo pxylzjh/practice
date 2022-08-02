@@ -1,4 +1,6 @@
-package com.pxy.proxy.service;
+package com.pxy.design_mode.proxy;
+
+import com.pxy.design_mode.proxy.service.Hello;
 
 import java.lang.reflect.Proxy;
 

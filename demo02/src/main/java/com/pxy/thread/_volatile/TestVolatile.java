@@ -1,4 +1,4 @@
-package com.pxy._volatile;
+package com.pxy.thread._volatile;
 
 /**
  * @author puxy

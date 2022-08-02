@@ -1,6 +1,6 @@
-package com.pxy.proxy.service.Impl;
+package com.pxy.design_mode.proxy.service.Impl;
 
-import com.pxy.proxy.service.Hello;
+import com.pxy.design_mode.proxy.service.Hello;
 
 /**
  * @author puxy
