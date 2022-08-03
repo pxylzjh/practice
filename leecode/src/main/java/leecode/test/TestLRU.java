@@ -1,6 +1,4 @@
-package com.pxy.leecode.test;
-
-import java.util.LinkedList;
+package leecode.test;
 
 /**
  * @author puxy

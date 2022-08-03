@@ -1,4 +1,4 @@
-package com.pxy.leecode.test;
+package leecode.test;
 
 import sun.misc.Lock;
 

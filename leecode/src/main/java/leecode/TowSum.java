@@ -1,4 +1,4 @@
-package com.pxy.leecode;
+package leecode;
 
 import java.util.Arrays;
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package com.pxy.leecode.day1;
+package leecode.day1;
 
 /**
  * @author puxy
