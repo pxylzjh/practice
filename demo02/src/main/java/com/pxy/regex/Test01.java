@@ -34,13 +34,14 @@ public class Test01 {
         boolean matches3 = password.matches(regex3);
         System.out.println(matches3);
 
+        test01();
     }
 
     private static void test01() {
-        //        String regex = "(?<=\\{).*?(?=\\})";
-        String regex = "\\{.*?\\}";
+        String regex = "(?<=\\{).*?(?=\\})";
+        String regex_ = "\\{.*?\\}";
         String str = "http://10.19.83.176:3100/locationAPI/special-subject-service/liveMonitoring/{visible}/{service}";
-        Matcher compile = Pattern.compile(regex).matcher(str);
+        Matcher compile = Pattern.compile(regex_).matcher(str);
         //找出符合正则的所有字符
         while (compile.find()) {
             System.out.println(compile.group());
