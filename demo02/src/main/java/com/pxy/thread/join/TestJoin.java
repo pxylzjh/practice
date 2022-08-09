@@ -1,4 +1,4 @@
-package com.pxy.thread.a;
+package com.pxy.thread.join;
 
 /**
  * @author puxy
@@ -6,7 +6,7 @@ package com.pxy.thread.a;
  * @description TODO
  * @date 2021/7/5 17:09
  */
-public class Test {
+public class TestJoin {
 
     public static void main(String[] args) throws InterruptedException {
 

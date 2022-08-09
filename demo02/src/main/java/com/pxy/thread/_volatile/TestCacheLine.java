@@ -6,7 +6,7 @@ package com.pxy.thread._volatile;
  * @description 测试缓存行对齐
  * @date 2021/1/8 16:09
  */
-public class TestVolatile {
+public class TestCacheLine {
 
     /**
      * Long 为 8 字节，在计算机中 1 字节(byte)=8比特(bit)，所以1个Long占64bit
