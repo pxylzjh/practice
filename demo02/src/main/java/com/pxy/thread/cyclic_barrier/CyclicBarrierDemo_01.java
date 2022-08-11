@@ -1,7 +1,6 @@
 package com.pxy.thread.cyclic_barrier;
 
 import java.util.concurrent.BrokenBarrierException;
-import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CyclicBarrier;
 
 /**
@@ -21,9 +20,9 @@ public class CyclicBarrierDemo_01 {
      */
     public static void main(String[] args) throws Exception {
 
-        // test01();
+         test01();
 
-        test02();
+//        test02();
 
     }
 
