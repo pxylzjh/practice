@@ -14,7 +14,7 @@ public class Communication_notify {
     private static final Object object = new Object();
 
     //==================================================
-    // wait() 和 notify()必须配合 synchronized 使用,不然会报错 java.lang.IllegalMonitorStateException
+    // wait() 和 notify()必须配合 synchronized 使用 即必须在 同步代码块中使用,不然会报错 java.lang.IllegalMonitorStateException
     //
     //==================================================
 
