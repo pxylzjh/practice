@@ -23,9 +23,9 @@ public class Interrupt_Blocked {
             public void run() {
                 System.out.println("线程A等待获取锁");
                 synchronized (object){
-                    System.out.println("线程A获取锁成功");
-                    while (this.isInterrupted()) {
-                        break;
+                    System.out.println("线程A获取锁成功:"+this.isInterrupted());
+                    // 死循环 让A保持 RUNNABLE 状态
+                    while (true) {
                     }
                 }
             }
@@ -44,12 +44,19 @@ public class Interrupt_Blocked {
         threadA.start();
         // 确保A线程先获得锁  B线程被阻塞
         Thread.sleep(1000);
+        System.out.println("A:"+threadA.getState());
+
         threadB.start();
-        // 线程B 等待获取锁 处于 BLOCKED状态  此时调用interrupt并不会结束线程B
+        Thread.sleep(1000);
+        System.out.println("B:"+threadB.getState());
+        // 线程B 等待获取锁 处于 BLOCKED状态  此时调用interrupt并不会中断线程B  B线程会一直处于BLOCKED
         threadB.interrupt();
-        // 3秒后,中断线程A 并释放锁,线程B获取锁
-        Thread.sleep(3000);
+        Thread.sleep(1000);
+        System.out.println("interrupted - B:"+threadB.getState());
+        // 中断线程A 此时A依旧处于RUNNABLE状态 调用interrupt并不会中断线程A A线程会一直处于RUNNABLE
         threadA.interrupt();
+        Thread.sleep(1000);
+        System.out.println("interrupted - A:"+threadA.getState());
         System.out.println("主线程出栈");
 
     }
