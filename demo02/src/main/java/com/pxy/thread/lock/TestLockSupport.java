@@ -38,7 +38,8 @@ public class TestLockSupport {
         System.out.println(thread.isInterrupted());
         Thread.sleep(1000);//1s
         System.out.println(thread.getState());
-        // LockSupport.park() 使线程进入WAITING 或者 TIMED_WAITING 状态,但是调用interrupt方法时候 不会像 Thread.sleep/join、Object.wait一样抛出InterruptedException
+        // LockSupport.park() 使线程进入WAITING 或者 TIMED_WAITING 状态,但是调用interrupt方法时候
+        // 不会像 Thread.sleep/join、Object.wait一样抛出InterruptedException,是因为LockSupport.park()方法没有响应中断,所以继续执行
         thread.interrupt();
         Thread.sleep(1000);//1s
         System.out.println(thread.isInterrupted());
