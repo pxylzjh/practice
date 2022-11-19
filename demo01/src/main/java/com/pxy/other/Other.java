@@ -1,4 +1,4 @@
-package com.other;
+package com.pxy.other;
 
 import java.util.ArrayList;
 import java.util.List;
