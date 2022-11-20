@@ -5,12 +5,12 @@ import com.pxy.lambda.FunctionInterface;
 /**
  * @author puxy
  * @version 1.0
- * @description TODO
+ * @description 创建 线程 的 一种写法
  * @date 2021/2/24 11:01
  */
-public class Ts {
+public class CreateThread_Lambda {
     public static void main(String[] args) {
-        Ts ts = new Ts();
+        CreateThread_Lambda ts = new CreateThread_Lambda();
         /**
          * m方法必须是一个无参无返回的方法，就像 runnable 接口的run方法，runnable 接口只有一个 run方法切是无参无返回的，
          * 所以此处传入ts的m方法就相当于run方法的实现了，有点抽象，要一个这样的方法，就传入一个这样的方法
