@@ -10,10 +10,10 @@ import java.util.concurrent.CountDownLatch;
  */
 public class CountDownLatchDemo_01 {
 
-    // 让线程D等其它线程执行完毕后再执行
+    // 让线程D等其它线程执行完毕后再执行,即 必须等 count 减为0 被 await()阻塞的线程才能执行
     public static void main(String[] args) {
 
-        CountDownLatch countDownLatch = new CountDownLatch(3    );
+        CountDownLatch countDownLatch = new CountDownLatch(3);
         Runnable r = () -> {
             System.out.printf("线程[%s]开始执行\n", Thread.currentThread().getName());
             try {

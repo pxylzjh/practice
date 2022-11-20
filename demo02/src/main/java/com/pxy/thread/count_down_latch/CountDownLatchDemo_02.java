@@ -1,6 +1,7 @@
 package com.pxy.thread.count_down_latch;
 
 import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author puxy
@@ -12,7 +13,7 @@ public class CountDownLatchDemo_02 {
 
 
     // 结果：被阻塞的线程被唤醒后 需要 竞争锁,谁能强到谁执行,与AQS有关
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
 
         CountDownLatch countDownLatch = new CountDownLatch(3);
@@ -30,6 +31,7 @@ public class CountDownLatchDemo_02 {
         for (int i = 0; i < 3; i++) {
             new Thread(r,String.valueOf(i)).start();
             countDownLatch.countDown();
+            TimeUnit.SECONDS.sleep(1);
         }
 
     }
