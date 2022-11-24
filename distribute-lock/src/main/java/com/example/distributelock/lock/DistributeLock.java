@@ -1,4 +1,4 @@
-package com.example.distributelock.test;
+package com.example.distributelock.lock;
 
 import org.springframework.beans.TypeConverter;
 import org.springframework.beans.factory.ObjectProvider;
@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Arrays;
-import java.util.List;
 import java.util.Set;
 import java.util.UUID;
 import java.util.concurrent.TimeUnit;

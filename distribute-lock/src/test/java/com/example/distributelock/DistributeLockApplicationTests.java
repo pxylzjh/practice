@@ -1,6 +1,6 @@
 package com.example.distributelock;
 
-import com.example.distributelock.test.DistributeLock;
+import com.example.distributelock.lock.DistributeLock;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

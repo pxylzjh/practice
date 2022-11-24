@@ -1,4 +1,4 @@
-package com.example.distributelock.test;
+package com.example.distributelock.lock;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RequestMapping;
