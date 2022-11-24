@@ -18,19 +18,19 @@ import java.util.concurrent.locks.ReentrantLock;
 /**
  * @author puxy
  * @version 1.0
- * @description
+ * @description 分布式锁  及其 演进过程
  * @date 2022/11/7 18:16
  */
 @RestController
 public class DistributeLock {
 
-    private RedisTemplate redisTemplate;
+    private RedisTemplate<String, String> redisTemplate;
 
     /**
      * 这里采用 ObjectProvider进行依赖注入，底层也是调用，因为在springboot的自动配置包中看到有很多地方用了这种方式，所以尝试一下
      * {@link org.springframework.beans.factory.support.DefaultListableBeanFactory#resolveDependency(DependencyDescriptor, String, Set, TypeConverter)}
      */
-    public DistributeLock(ObjectProvider<RedisTemplate> objectProvider) {
+    public DistributeLock(ObjectProvider<RedisTemplate<String, String>> objectProvider) {
         objectProvider.stream().forEach(template -> {
             if (template instanceof StringRedisTemplate) {
                 this.redisTemplate = template;
@@ -102,8 +102,8 @@ public class DistributeLock {
      */
     /**
      *
-     * @param lockName
-     * @param uuid
+     * @param lockName 锁名
+     * @param uuid     uuid
      */
     public void unLock2(String lockName, String uuid) {
         try {
