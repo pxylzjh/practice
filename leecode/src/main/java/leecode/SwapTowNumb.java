@@ -1,4 +1,4 @@
-package com.pxy.interview;
+package leecode;
 
 /**
  * @author puxy
@@ -6,7 +6,7 @@ package com.pxy.interview;
  * @description 一些面试题
  * @date 2021/2/4 11:23
  */
-public class Demo01 {
+public class SwapTowNumb {
 
     /**
      * 不使用额外的空间,完成两个整数的交换
