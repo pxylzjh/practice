@@ -1,4 +1,4 @@
-package com.pxy.weak;
+package com.pxy.reference;
 
 import java.lang.ref.PhantomReference;
 import java.lang.ref.ReferenceQueue;
@@ -8,7 +8,7 @@ import java.lang.ref.WeakReference;
 /**
  * @author puxy
  * @version 1.0
- * @description TODO
+ * @description 测试下强引用、软引用、弱引用、虚引用
  * @date 2021/7/5 18:01
  */
 public class Test {
