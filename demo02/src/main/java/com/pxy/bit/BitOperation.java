@@ -1,5 +1,11 @@
 package com.pxy.bit;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.locks.ReentrantLock;
+
 /**
  * @author puxy
  * @version 1.0
@@ -13,7 +19,44 @@ public class BitOperation {
 
         System.out.println(1 ^ 0);
 
-    }
 
+
+        int size = 16;
+        int n = size - (size >>> 2);
+        System.out.println(n);
+
+        int s = 1;
+        s <<= 2;
+        System.out.println(s);
+
+//        test();
+
+        System.out.println(Integer.MAX_VALUE+1);
+
+
+        int a = 4;
+        int x = (a >>> 2);
+        int r = a - (a >>> 2);
+
+        System.out.println(x);
+        System.out.println(r);
+
+    }
+    public static void test() {
+        int sshift = 0;
+        int ssize = 1;
+        while (ssize < 16) {
+            ++sshift;
+            ssize <<= 1;
+        }
+        int c = 16 / ssize;
+        if (c * ssize < 16)
+            ++c;
+        int cap = 2;
+        while (cap < c)
+            cap <<= 1;
+
+        System.out.println(sshift+"-"+ssize+"-"+c+"-"+cap);
+    }
 
 }

@@ -21,7 +21,7 @@ public class ThreadPool_Demo_01 {
          * 2：使用ThreadPoolExecutor创建线程池(1种)
          */
 
-//        fixedThreadPool();
+        fixedThreadPool();
 //        cacheThreadPool();
 //        singleThreadPool();
 //        scheduledThreadPool();

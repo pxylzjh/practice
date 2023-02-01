@@ -1,4 +1,4 @@
-package com.pxy.list;
+package com.pxy.collection.list;
 
 import java.util.ArrayList;
 import java.util.HashMap;
