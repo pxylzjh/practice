@@ -28,33 +28,33 @@ public class TE {
             e.printStackTrace();
 
         }
-        Thread t1 = new Thread(() -> {
-
-            Thread t2 = new Thread(() -> {
-
-                synchronized ("a"){
-                    for (int i = 0; i < arrayString.length; i++) {
-                        System.out.println(arrayString[i]);
-                        try {
-                            Thread.currentThread().wait();
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                }
-
-            }, "t2");
-            t2.start();
-
-
-            for (int i = 0; i < arrayInt.length; i++) {
-                System.out.println(arrayInt[i]);
-                t2.notify();
-            }
-
-        }, "t1");
-
-        t1.start();
+//        Thread t1 = new Thread(() -> {
+//
+//            Thread t2 = new Thread(() -> {
+//
+//                synchronized ("a"){
+//                    for (int i = 0; i < arrayString.length; i++) {
+//                        System.out.println(arrayString[i]);
+//                        try {
+//                            Thread.currentThread().wait();
+//                        } catch (InterruptedException e) {
+//                            e.printStackTrace();
+//                        }
+//                    }
+//                }
+//
+//            }, "t2");
+//            t2.start();
+//
+//
+//            for (int i = 0; i < arrayInt.length; i++) {
+//                System.out.println(arrayInt[i]);
+//                t2.notify();
+//            }
+//
+//        }, "t1");
+//
+//        t1.start();
 
 
 
