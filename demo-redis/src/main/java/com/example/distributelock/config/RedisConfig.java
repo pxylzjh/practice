@@ -86,15 +86,16 @@ public class RedisConfig {
     @Order(1)
     public JedisConnectionFactory jedisConnectionFactory() {
 
+        // 哨兵集群节点
         Set<String> setRedisNode = new HashSet<>();
         setRedisNode.add("121.42.157.181:26379");
         setRedisNode.add("121.42.157.181:26380");
         setRedisNode.add("121.42.157.181:26381");
+        // myMaster是哨兵配置文件中的 主节点名,必须保持一致不然报错
         RedisSentinelConfiguration redisSentinelConfiguration = new RedisSentinelConfiguration("myMaster", setRedisNode);
 
-        JedisPoolConfig poolConfig = new JedisPoolConfig();
-
         // 1.配置 jedis 连接池
+        JedisPoolConfig poolConfig = new JedisPoolConfig();
         poolConfig.setMaxTotal(maxTotal);
         poolConfig.setMaxIdle(maxIdle);
         poolConfig.setNumTestsPerEvictionRun(numTestsPerEvictionRun);
