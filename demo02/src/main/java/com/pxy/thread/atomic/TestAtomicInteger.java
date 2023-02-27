@@ -1,6 +1,7 @@
 package com.pxy.thread.atomic;
 
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.atomic.LongAdder;
 
 /**
  * @author puxy
@@ -8,7 +9,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @description 学习 atomic 原子类
  * @date 2022/11/20 23:18
  */
-public class Test {
+public class TestAtomicInteger {
 
     /**
      * 原子类:
@@ -28,6 +29,11 @@ public class Test {
         ai.decrementAndGet();
 
         System.out.println(ai);
+
+
+        LongAdder longAdder = new LongAdder();
+        longAdder.add(1);
+        System.out.println(longAdder.sum());
     }
 
 }
