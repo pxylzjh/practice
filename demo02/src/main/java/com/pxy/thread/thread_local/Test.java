@@ -21,7 +21,7 @@ public class Test {
      *
      *  下面我们将用HashMap来代替ThreadLocalMap，将HashMap的key和value都变成弱引用，手动执行gc，看最终打印结果是什么
      *
-     *
+     *   注意：弱引用在发生GC就会被回收，前提是在后续的代码中没有直接引用
      */
 
     public static void main(String[] args) throws Exception {

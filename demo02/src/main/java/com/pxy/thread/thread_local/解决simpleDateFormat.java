@@ -1,0 +1,43 @@
+package com.pxy.thread.thread_local;
+
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+/**
+ * @author puxy
+ * @version 1.0
+ * @description ThreadLocal解决SimpleDateFormat线程安全问题
+ * @date 2023/2/26 00:17
+ */
+public class 解决simpleDateFormat {
+
+    // 感觉其实本质还是 给每个线程都new了一个 SimpleDateFormat对象
+    static ThreadLocal<DateFormat> threadLocal = ThreadLocal.withInitial(()-> new SimpleDateFormat("yyyy-MM-dd"));
+
+    public static void main(String[] args) {
+
+        testParse();
+
+    }
+
+    /**
+     */
+    private static void testParse() {
+
+        for (int i = 0; i < 10; i++) {
+
+            new Thread(()->{
+                try {
+                    Date parse = threadLocal.get().parse("2011-01-01");
+                    System.out.println(parse);
+
+                } catch (ParseException e) {
+                    throw new RuntimeException(e);
+                }
+            }).start();
+        }
+    }
+
+}
