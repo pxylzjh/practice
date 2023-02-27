@@ -19,7 +19,7 @@ public class TestResource {
 
 
     @Resource
-    private IAService aService;
+    private IAService AService1;
 
     @Autowired
     private BeanFactory beanFactory;
@@ -27,7 +27,7 @@ public class TestResource {
     private ApplicationContext applicationContext;
 
     public void test(){
-        aService.say();
+        AService1.say();
 
     }
 }
