@@ -11,7 +11,6 @@ import org.springframework.stereotype.Service;
  * @date 2022/12/27 16:34
  */
 @Service
-@Primary
 public class AService2 implements IAService {
     @Override
     public void say() {

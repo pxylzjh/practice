@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
  * @description TODO
  * @date 2022/12/27 16:34
  */
-@Service("aService")
+@Service
 
 public class AService1 implements IAService {
     @Override

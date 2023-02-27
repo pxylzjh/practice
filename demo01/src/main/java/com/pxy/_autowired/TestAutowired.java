@@ -15,9 +15,9 @@ public class TestAutowired {
 
 
     @Autowired
-    private IAService aService;
+    private IAService AService1;
 
     public void test(){
-        aService.say();
+        AService1.say();
     }
 }
