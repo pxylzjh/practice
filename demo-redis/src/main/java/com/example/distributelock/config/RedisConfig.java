@@ -28,7 +28,7 @@ import java.util.Set;
  * @date 2023/2/3 10:26
  */
 @Data
-@Configuration
+//@Configuration
 @PropertySource("classpath:redis.properties")
 public class RedisConfig {
 
