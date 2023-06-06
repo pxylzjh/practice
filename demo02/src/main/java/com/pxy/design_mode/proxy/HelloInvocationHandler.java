@@ -1,8 +1,9 @@
 package com.pxy.design_mode.proxy;
 
+import com.pxy.design_mode.proxy.service.Hello;
+
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
-import java.lang.reflect.Proxy;
 
 /**
  * @author puxy
@@ -10,13 +11,24 @@ import java.lang.reflect.Proxy;
  * @description HelloHandler
  * @date 2021/4/2 14:35
  */
-public class HelloHandler implements InvocationHandler {
+public class HelloInvocationHandler implements InvocationHandler {
+
+    private Hello target;
+
+    public HelloInvocationHandler() {
+    }
+
+    public HelloInvocationHandler(Hello target) {
+        this.target = target;
+    }
 
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         System.out.println(method);
         if (method.getName().equals("morning")) {
-            System.out.println("Good morning, " + args[0]);
+            System.out.println("前置操作");
+            method.invoke(target, args);
+            System.out.println("后置操作");
         }
         return null;
     }

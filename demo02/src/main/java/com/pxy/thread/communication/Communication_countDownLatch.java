@@ -52,6 +52,18 @@ public class Communication_countDownLatch {
             System.out.println("[线程B]被唤醒,开始执行");
         });
 
+
+        Thread threadC = new Thread(() -> {
+            System.out.println("[线程C]启动,等待唤醒");
+            try {
+                countDownLatch.await();
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+            System.out.println("[线程C]被唤醒,开始执行");
+        });
+
+        threadC.start();
         threadB.start();
         Thread.sleep(500);
         threadA.start();

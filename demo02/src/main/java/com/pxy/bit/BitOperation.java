@@ -17,13 +17,21 @@ public class BitOperation {
 
     public static void main(String[] args) {
 
+        int aa = 4;
+        int bb = 6;
+
+        System.out.println((aa&bb) + "sss" + (bb&aa));
+
+        int f = 6;
+        System.out.println(f >>>1);
+
         System.out.println(1 ^ 0);
 
 
 
-        int size = 16;
-        int n = size - (size >>> 2);
-        System.out.println(n);
+        int size = 64;
+        int n = size - (size >>> 3);
+        System.out.println(size >>> 2);
 
         int s = 1;
         s <<= 2;

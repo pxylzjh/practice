@@ -1,4 +1,4 @@
-package com.pxy.design_mode.proxy.service.Impl;
+package com.pxy.design_mode.proxy.service;
 
 import com.pxy.design_mode.proxy.service.Hello;
 
@@ -8,7 +8,7 @@ import com.pxy.design_mode.proxy.service.Hello;
  * @description 实现类
  * @date 2021/4/2 14:56
  */
-public class HelloImpl implements Hello {
+public final class HelloImpl implements Hello {
     @Override
     public void morning(String msg) {
         System.out.println("good morning:"+msg);

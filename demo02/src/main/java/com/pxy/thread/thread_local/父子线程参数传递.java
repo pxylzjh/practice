@@ -16,11 +16,17 @@ public class 父子线程参数传递 {
         // 测试通过 InheritableThreadLocal 获取父线程的数据
         // test01();
         // 父线程修改ThreadLocal的值后
+        test02();
 
+    }
+
+    private static void test02() {
         ExecutorService es = Executors.newFixedThreadPool(1);
         InheritableThreadLocal<String> inheritableThreadLocal = new InheritableThreadLocal<>();
+        ThreadLocal<String> threadLocal = new ThreadLocal<>();
         inheritableThreadLocal.set("我是父线程");
-
+        threadLocal.set("xxxx");
+        System.out.println(threadLocal.get());
         es.submit(() -> {
 
             String s = inheritableThreadLocal.get();
@@ -36,7 +42,6 @@ public class 父子线程参数传递 {
             Thread.currentThread();
             System.out.println("父线程修改ThreadLocal的值之后:" + s);
         });
-
     }
 
     private static void test01() {

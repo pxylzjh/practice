@@ -12,6 +12,12 @@ import java.util.Date;
  * @date 2023/2/26 00:17
  */
 public class 解决simpleDateFormat {
+    // 当采用全局的 SimpleDateFormat 对象时 还是会有线程安全问题
+//    static SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+//    // 感觉其实本质还是 给每个线程都new了一个 SimpleDateFormat对象
+//    static ThreadLocal<DateFormat> threadLocal = ThreadLocal.withInitial(()-> {
+//        return sdf;
+//    });
 
     // 感觉其实本质还是 给每个线程都new了一个 SimpleDateFormat对象
     static ThreadLocal<DateFormat> threadLocal = ThreadLocal.withInitial(()-> new SimpleDateFormat("yyyy-MM-dd"));
