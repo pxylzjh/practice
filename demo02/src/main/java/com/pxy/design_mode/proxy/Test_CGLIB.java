@@ -31,12 +31,12 @@ public class Test_CGLIB {
 
     public static void main(String[] args) {
         // 对有接口的类进行代理
-//        test01();
+        test01();
 
         // 对没接口的类进行代理
 //        test02();
         // 对接口进行代理
-        test03();
+//        test03();
 
 
     }
@@ -98,7 +98,8 @@ public class Test_CGLIB {
         HelloImpl proxy = (HelloImpl)enhancer.create();
 
         // 通过代理对象调用方法
-        proxy.morning("cglib");
+        String res = proxy.morning("cglib");
+        System.out.println(res);
     }
 
 

@@ -9,6 +9,6 @@ package com.pxy.design_mode.proxy.service;
 public interface Hello {
 
 
-    void morning(String msg);
+    String morning(String msg);
 
 }

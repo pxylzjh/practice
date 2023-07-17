@@ -28,9 +28,9 @@ public class HelloMethodInterceptor implements MethodInterceptor {
         // 对目标方法进行前置操作
         System.out.println("前置增强");
         // 执行 目标方法
-        methodProxy.invoke(target, objects);
+        Object invoke = methodProxy.invoke(target, objects);
         // 对目标方法进行后置操作
         System.out.println("后置增强");
-        return null;
+        return invoke;
     }
 }

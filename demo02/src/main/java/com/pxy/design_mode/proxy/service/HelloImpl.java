@@ -10,7 +10,10 @@ import com.pxy.design_mode.proxy.service.Hello;
  */
 public final class HelloImpl implements Hello {
     @Override
-    public void morning(String msg) {
+    public String morning(String msg) {
+
         System.out.println("good morning:"+msg);
+
+        return "xx";
     }
 }

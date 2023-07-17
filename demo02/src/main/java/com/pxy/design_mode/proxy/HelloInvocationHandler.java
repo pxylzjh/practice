@@ -25,12 +25,13 @@ public class HelloInvocationHandler implements InvocationHandler {
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         System.out.println(method);
+        Object res = null;
         if (method.getName().equals("morning")) {
             System.out.println("前置操作");
-            method.invoke(target, args);
+            res = method.invoke(target, args);
             System.out.println("后置操作");
         }
-        return null;
+        return res;
     }
 
 }
