@@ -1,4 +1,4 @@
-package com.pxy.other;
+package com.pxy.DI;
 
 /**
  * @author puxy

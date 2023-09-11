@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * @author puxy
  * @version 1.0
- * @description redisson试下分布式锁
+ * @description redisson实现分布式锁
  * @date 2023/5/23 04:03
  */
 @RestController

@@ -36,6 +36,7 @@ public class Test {
                     }
                     byte[] bytes = new byte[in.available()];
                     in.read(bytes);
+                    // 创建对象 并 校验
                     return defineClass(name, bytes, 0, bytes.length);
                 } catch (Exception e) {
                     e.printStackTrace();

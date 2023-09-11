@@ -19,7 +19,8 @@ public class 解决simpleDateFormat {
 //        return sdf;
 //    });
 
-    // 感觉其实本质还是 给每个线程都new了一个 SimpleDateFormat对象
+    // 感觉其实本质还是 给每个线程都new了一个 SimpleDateFormat对象，但是，我之前以为和使用的时候每次都new一个sdf的效果是一样的，其实不一样，采用threadLocal
+    // 每个线程只会创建一个sdf，而每次手动new的话，每个线程都会创建一个sdf对象
     static ThreadLocal<DateFormat> threadLocal = ThreadLocal.withInitial(()-> new SimpleDateFormat("yyyy-MM-dd"));
 
     public static void main(String[] args) {

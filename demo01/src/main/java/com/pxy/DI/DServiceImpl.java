@@ -1,5 +1,6 @@
-package com.pxy.other;
+package com.pxy.DI;
 
+import com.pxy.DI.DService;
 import org.springframework.stereotype.Service;
 
 /**
@@ -9,7 +10,7 @@ import org.springframework.stereotype.Service;
  * @date 2022/9/15 00:42
  */
 @Service
-public class DServiceImpl implements DService{
+public class DServiceImpl implements DService {
     @Override
     public void testSetInjection() {
         System.out.println("set方法注入");

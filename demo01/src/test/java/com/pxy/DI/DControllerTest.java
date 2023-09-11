@@ -1,11 +1,10 @@
-package com.pxy.other;
+package com.pxy.DI;
 
+import com.pxy.DI.DController;
 import com.pxy.test.BaseTest;
 import org.junit.jupiter.api.Test;
 
 import javax.annotation.Resource;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * @author puxy
